@@ -295,5 +295,24 @@ function setupCategoryFilters() {
     });
 }
 
+// View Catalog Button Logic
+const viewCatalogBtn = document.getElementById('view-catalog-btn');
+if (viewCatalogBtn) {
+    viewCatalogBtn.addEventListener('click', (e) => {
+        e.preventDefault();
 
+        // Reset filters
+        const navLinks = document.querySelectorAll('.secondary-nav a');
+        navLinks.forEach(l => l.classList.remove('nav-highlight'));
 
+        // Render all products
+        renderProducts(products);
+
+        // Scroll to products
+        const productsSection = document.getElementById('products-container');
+        if (productsSection) {
+            productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+}
+```
