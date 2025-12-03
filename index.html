@@ -89,73 +89,34 @@
         <div class="container">
             <h2 class="section-title"><span class="decorative-icon"><i class="fas fa-star"></i></span> Favoritos de
                 Santa <span class="decorative-icon"><i class="fas fa-star"></i></span></h2>
-            <div class="products-grid">
-                <!-- Product Card 1 -->
-                <article class="product-card">
-                    <div class="product-badge">Más vendido</div>
-                    <div class="product-img-placeholder" data-label="Castillo Mágico">
-                        <i class="fas fa-chess-rook"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>Castillo de Princesas de Ensueño</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p class="price">$899.00</p>
-                        <button class="btn btn-secondary">Apartar ahora</button>
-                    </div>
-                </article>
-                <!-- Product Card 2 -->
-                <article class="product-card">
-                    <div class="product-badge highlight">Top Regalo</div>
-                    <div class="product-img-placeholder" data-label="Set Espacial">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>Estación Espacial LEGO Style</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="price">$1,250.00</p>
-                        <button class="btn btn-secondary">Apartar ahora</button>
-                    </div>
-                </article>
-                <!-- Product Card 3 -->
-                <article class="product-card">
-                    <div class="product-badge">Oferta</div>
-                    <div class="product-img-placeholder" data-label="Oso Gigante">
-                        <i class="fas fa-paw"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>Oso de Peluche Gigante (1.2m)</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="far fa-star"></i>
-                        </div>
-                        <p class="price">$599.00 <span class="old-price">$750.00</span></p>
-                        <button class="btn btn-secondary">Apartar ahora</button>
-                    </div>
-                </article>
-                <!-- Product Card 4 -->
-                <article class="product-card">
-                    <div class="product-img-placeholder" data-label="Juego de Mesa">
-                        <i class="fas fa-dice"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3>Juego de Mesa "Aventura Familiar"</h3>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="price">$450.00</p>
-                        <button class="btn btn-secondary">Apartar ahora</button>
-                    </div>
-                </article>
+            <div class="products-grid" id="products-container">
+                <!-- Products will be loaded dynamically via script.js -->
             </div>
         </div>
     </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Tu Carrito Navideño</h2>
+                <button id="close-cart" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will appear here -->
+                <div class="empty-cart-msg">Tu carrito está vacío. ¡Agrega algo de alegría!</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="btn btn-primary btn-block">
+                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- 4. Sección por Edades -->
     <section class="section ages">
@@ -290,6 +251,7 @@
         </div>
     </footer>
 
+    <script src="products.js"></script>
     <script src="script.js"></script>
 </body>
 
