@@ -584,7 +584,7 @@ ul {
 }
 
 .product-image {
-    display: none;
+    display: block;
     /* Reference image doesn't show large images, or they are very subtle? 
                      Wait, the reference image HAS NO IMAGES, just text and button? 
                      Ah, looking closely at Image 2... 
