@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="La mejor tienda de juguetes para Navidad. Encuentra regalos para bebés, niños y niñas. Envíos rápidos y seguros.">
-    <title>JuguetesNavidad - El Regalo Perfecto</title>
+    <meta name="description"
+        content="Toys Favs - La mejor tienda de juguetes para Navidad. Encuentra regalos para bebés, niños y niñas. Entrega exclusiva en Plaza Parque Jardín.">
+    <title>Toys Favs - La Alegría de la Navidad</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- 1. Header -->
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <a href="#">Juguetes<span class="highlight">Navidad</span></a>
+                <a href="#">Toys<span class="highlight">Favs</span></a>
             </div>
 
             <div class="search-bar">
-                <input type="text" placeholder="Buscar el regalo perfecto...">
+                <input type="text" placeholder="¿Qué regalo buscas hoy?">
                 <button type="button"><i class="fas fa-search"></i></button>
             </div>
 
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#bebes">Bebés</a></li>
-                    <li><a href="#3-5">3 a 5 años</a></li>
-                    <li><a href="#6-9">6 a 9 años</a></li>
-                    <li><a href="#10-12">10 a 12 años</a></li>
-                    <li><a href="#juegos">Juegos de mesa</a></li>
-                    <li><a href="#educativos">Educativos</a></li>
+                    <li><a href="#3-5">3-5 años</a></li>
+                    <li><a href="#6-9">6-9 años</a></li>
+                    <li><a href="#10-12">10-12 años</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
                     <li><a href="#ofertas" class="nav-highlight">Ofertas</a></li>
                 </ul>
             </nav>
@@ -46,19 +50,18 @@
                 <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </div>
         </div>
-        <!-- Mobile Menu (Hidden by default) -->
+        <!-- Mobile Menu -->
         <div class="mobile-nav">
             <div class="mobile-search">
                 <input type="text" placeholder="Buscar...">
                 <button><i class="fas fa-search"></i></button>
             </div>
-             <ul>
+            <ul>
                 <li><a href="#bebes">Bebés</a></li>
                 <li><a href="#3-5">3 a 5 años</a></li>
                 <li><a href="#6-9">6 a 9 años</a></li>
                 <li><a href="#10-12">10 a 12 años</a></li>
-                <li><a href="#juegos">Juegos de mesa</a></li>
-                <li><a href="#educativos">Educativos</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
                 <li><a href="#ofertas">Ofertas navideñas</a></li>
             </ul>
         </div>
@@ -66,75 +69,88 @@
 
     <!-- 2. Hero Principal -->
     <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>La magia de la Navidad en tu zona</h1>
-                <p>Encuentra el regalo perfecto y recíbelo en persona. Entregas exclusivas en <strong>Plaza Jardin 330</strong>.</p>
-                <a href="#recomendados" class="btn btn-primary">Ver catálogo local</a>
-            </div>
-            <div class="hero-image">
-                <!-- Placeholder for Hero Image. Para usar tu propia imagen, reemplaza este div con: <img src="tu-imagen.jpg" alt="Imagen Principal"> -->
-                <div class="img-placeholder" data-label="Imagen Principal (Hero)">
-                    <i class="fas fa-gift"></i>
+                <h1>La Alegría de la Navidad <br>en Azcapotzalco</h1>
+                <p>Encuentra el regalo soñado y recíbelo personalmente en nuestro punto exclusivo.</p>
+                <div class="hero-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Plaza Parque Jardín - Av. Jardín 330</span>
                 </div>
+                <a href="#recomendados" class="btn btn-primary">Ver Catálogo Navideño</a>
             </div>
+            <!-- Image will be set via CSS background or we can use an img tag if generated -->
         </div>
     </section>
 
     <!-- 3. Sección de Recomendados -->
     <section id="recomendados" class="section recommended">
         <div class="container">
-            <h2 class="section-title">Recomendados de Navidad</h2>
+            <h2 class="section-title"><span class="decorative-icon"><i class="fas fa-star"></i></span> Favoritos de
+                Santa <span class="decorative-icon"><i class="fas fa-star"></i></span></h2>
             <div class="products-grid">
                 <!-- Product Card 1 -->
                 <article class="product-card">
                     <div class="product-badge">Más vendido</div>
-                    <div class="product-img-placeholder" data-label="Foto Juguete 1"></div>
+                    <div class="product-img-placeholder" data-label="Castillo Mágico">
+                        <i class="fas fa-chess-rook"></i>
+                    </div>
                     <div class="product-info">
-                        <h3>Castillo Mágico de Ensueño</h3>
+                        <h3>Castillo de Princesas de Ensueño</h3>
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="price">$49.99</p>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
+                        <p class="price">$899.00</p>
+                        <button class="btn btn-secondary">Apartar ahora</button>
                     </div>
                 </article>
                 <!-- Product Card 2 -->
                 <article class="product-card">
-                    <div class="product-badge highlight">Ideal para regalo</div>
-                    <div class="product-img-placeholder" data-label="Foto Juguete 2"></div>
+                    <div class="product-badge highlight">Top Regalo</div>
+                    <div class="product-img-placeholder" data-label="Set Espacial">
+                        <i class="fas fa-rocket"></i>
+                    </div>
                     <div class="product-info">
-                        <h3>Set de Construcción Espacial</h3>
+                        <h3>Estación Espacial LEGO Style</h3>
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="price">$35.50</p>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
+                        <p class="price">$1,250.00</p>
+                        <button class="btn btn-secondary">Apartar ahora</button>
                     </div>
                 </article>
                 <!-- Product Card 3 -->
                 <article class="product-card">
                     <div class="product-badge">Oferta</div>
-                    <div class="product-img-placeholder" data-label="Foto Juguete 3"></div>
+                    <div class="product-img-placeholder" data-label="Oso Gigante">
+                        <i class="fas fa-paw"></i>
+                    </div>
                     <div class="product-info">
-                        <h3>Oso de Peluche Gigante</h3>
+                        <h3>Oso de Peluche Gigante (1.2m)</h3>
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="far fa-star"></i>
                         </div>
-                        <p class="price">$29.99 <span class="old-price">$39.99</span></p>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
+                        <p class="price">$599.00 <span class="old-price">$750.00</span></p>
+                        <button class="btn btn-secondary">Apartar ahora</button>
                     </div>
                 </article>
                 <!-- Product Card 4 -->
                 <article class="product-card">
-                    <div class="product-img-placeholder" data-label="Foto Juguete 4"></div>
+                    <div class="product-img-placeholder" data-label="Juego de Mesa">
+                        <i class="fas fa-dice"></i>
+                    </div>
                     <div class="product-info">
-                        <h3>Juego de Mesa Familiar</h3>
+                        <h3>Juego de Mesa "Aventura Familiar"</h3>
                         <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="price">$24.99</p>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
+                        <p class="price">$450.00</p>
+                        <button class="btn btn-secondary">Apartar ahora</button>
                     </div>
                 </article>
             </div>
@@ -144,91 +160,98 @@
     <!-- 4. Sección por Edades -->
     <section class="section ages">
         <div class="container">
-            <h2 class="section-title">Busca por Edad</h2>
+            <h2 class="section-title">Encuentra el regalo ideal por edad</h2>
             <div class="ages-grid">
                 <a href="#bebes" class="age-card">
-                    <div class="age-img-placeholder" data-label="Bebés"></div>
-                    <h3>Bebés</h3>
+                    <div class="age-icon"><i class="fas fa-baby"></i></div>
+                    <h3>Bebés (0-2)</h3>
                 </a>
                 <a href="#3-5" class="age-card">
-                    <div class="age-img-placeholder" data-label="3 a 5 años"></div>
+                    <div class="age-icon"><i class="fas fa-child"></i></div>
                     <h3>3 a 5 años</h3>
                 </a>
                 <a href="#6-9" class="age-card">
-                    <div class="age-img-placeholder" data-label="6 a 9 años"></div>
+                    <div class="age-icon"><i class="fas fa-gamepad"></i></div>
                     <h3>6 a 9 años</h3>
                 </a>
                 <a href="#10-12" class="age-card">
-                    <div class="age-img-placeholder" data-label="10 a 12 años"></div>
+                    <div class="age-icon"><i class="fas fa-headset"></i></div>
                     <h3>10 a 12 años</h3>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 5. Beneficios -->
-    <section class="section benefits">
-        <div class="container benefits-grid">
-            <div class="benefit-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Entregas Personales</h3>
-                <p>Recibe en Plaza Jardin 330</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-hand-holding-usd"></i>
-                <h3>Pago Contra Entrega</h3>
-                <p>Paga al recibir tu producto</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-undo"></i>
-                <h3>Devoluciones Fáciles</h3>
-                <p>Sin preguntas complicadas</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-gift"></i>
-                <h3>Listo para Regalar</h3>
-                <p>Opciones de envoltura disponibles</p>
+    <!-- 5. Ubicación y Entrega (NUEVO) -->
+    <section id="ubicacion" class="section location-section">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-text">
+                    <h2 class="section-title">Punto de Entrega Exclusivo</h2>
+                    <p class="location-desc">Para tu seguridad y comodidad, realizamos todas las entregas en un punto
+                        céntrico y seguro.</p>
+
+                    <div class="address-box">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>
+                            <h3>Plaza Parque Jardín</h3>
+                            <p>Av. Jardín 330, Col del Gas</p>
+                            <p>Azcapotzalco, 02950 Ciudad de México, CDMX</p>
+                        </div>
+                    </div>
+
+                    <div class="delivery-hours">
+                        <h3><i class="far fa-clock"></i> Horarios de Entrega</h3>
+                        <p>Lunes a Domingo: 10:00 AM - 8:00 PM</p>
+                        <p class="note">* Previa confirmación de pedido</p>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=Av.+Jardín+330,+Col+del+Gas,+Azcapotzalco,+02950+Ciudad+de+México,+CDMX"
+                        target="_blank" class="btn btn-outline">Ver en Google Maps</a>
+                </div>
+                <div class="location-map-placeholder">
+                    <!-- Placeholder for map image or iframe -->
+                    <i class="fas fa-map"></i>
+                    <span>Mapa de Ubicación</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Ofertas y Cuenta Regresiva -->
+    <!-- 6. Beneficios -->
+    <section class="section benefits">
+        <div class="container benefits-grid">
+            <div class="benefit-item">
+                <div class="icon-circle"><i class="fas fa-handshake"></i></div>
+                <h3>Entrega Personal</h3>
+                <p>Segura y confiable en Plaza Parque Jardín</p>
+            </div>
+            <div class="benefit-item">
+                <div class="icon-circle"><i class="fas fa-money-bill-wave"></i></div>
+                <h3>Pago Contra Entrega</h3>
+                <p>Revisa tu producto antes de pagar</p>
+            </div>
+            <div class="benefit-item">
+                <div class="icon-circle"><i class="fas fa-gift"></i></div>
+                <h3>Envoltura Gratis</h3>
+                <p>¡Listo para poner bajo el árbol!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Ofertas y Cuenta Regresiva -->
     <section id="ofertas" class="section offers">
         <div class="container offers-content">
             <div class="offers-text">
-                <h2>Ofertas Navideñas</h2>
-                <p>¡No dejes pasar los descuentos exclusivos antes de que llegue Santa!</p>
+                <h2>¡Ofertas Relámpago de Navidad!</h2>
+                <p>Descuentos especiales en juguetes seleccionados hasta agotar existencias.</p>
                 <div id="countdown" class="countdown">
                     <div class="time-box"><span id="days">00</span>Días</div>
                     <div class="time-box"><span id="hours">00</span>Hrs</div>
                     <div class="time-box"><span id="minutes">00</span>Min</div>
                     <div class="time-box"><span id="seconds">00</span>Seg</div>
                 </div>
-                <a href="#" class="btn btn-light">Ver todas las ofertas</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. Testimonios -->
-    <section class="section testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo que dicen otros padres</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Me encantó la selección de juguetes. Encontré justo lo que mi hijo quería y llegó súper rápido."</p>
-                    <div class="author">- María G.</div>
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"La envoltura de regalo es preciosa. Me ahorró mucho tiempo. ¡Totalmente recomendado!"</p>
-                    <div class="author">- Carlos R.</div>
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Excelente atención al cliente. Tuve una duda con un juego de mesa y me ayudaron al instante."</p>
-                    <div class="author">- Sofía L.</div>
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                </div>
+                <a href="#" class="btn btn-light">Ver Ofertas</a>
             </div>
         </div>
     </section>
@@ -237,43 +260,37 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
-                <h3>Atención al Cliente</h3>
+                <h3>Toys Favs</h3>
+                <p>Tu mejor opción para encontrar el regalo perfecto esta Navidad en Azcapotzalco.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="#">Centro de Ayuda</a></li>
-                    <li><a href="#">Punto de Entrega</a></li>
-                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#recomendados">Catálogo</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Políticas</h3>
-                <ul>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Métodos de Pago</h3>
-                <div class="payment-icons">
-                    <p>Pago en efectivo contra entrega</p>
-                    <i class="fas fa-money-bill-wave"></i>
-                </div>
+                <h3>Contacto</h3>
+                <p><i class="fab fa-whatsapp"></i> 55 1234 5678</p>
+                <p><i class="far fa-envelope"></i> ventas@toysfavs.com</p>
             </div>
             <div class="footer-col">
                 <h3>Síguenos</h3>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 JuguetesNavidad. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Toys Favs. Hecho con <i class="fas fa-heart"></i> para la Navidad.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
