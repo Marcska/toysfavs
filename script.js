@@ -19,8 +19,8 @@ const productsContainer = document.getElementById('products-container');
 const cartModal = document.getElementById('cart-modal');
 const cartItemsContainer = document.getElementById('cart-items');
 const cartTotalPriceEl = document.getElementById('cart-total-price');
-const cartBadge = document.querySelector('.cart-btn .badge');
-const cartBtn = document.querySelector('.cart-btn');
+const cartBadge = document.querySelector('.cart-count');
+const cartBtn = document.querySelector('.cart-icon');
 const closeCartBtn = document.getElementById('close-cart');
 const checkoutBtn = document.getElementById('checkout-btn');
 

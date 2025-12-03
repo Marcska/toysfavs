@@ -28,19 +28,16 @@
     <header class="header">
         <div class="container header-main">
             <div class="logo">
-                <a href="#">
-                    <i class="fas fa-gift" style="color: var(--primary-red); margin-right: 5px;"></i>
-                    Toys<span class="highlight">Favs</span>
-                    <a href="#"><i class="fas fa-gift"></i> Juguetería<span class="highlight">Mágica</span></a>
+                <a href="#"><i class="fas fa-gift"></i> Toys<span class="highlight">Favs</span></a>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="¿Qué regalo estás buscando?">
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="user-actions">
-                <a href="#" class="cart-icon">
+                <a href="#" class="cart-icon" onclick="openCart(); return false;">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">3</span>
+                    <span class="cart-count">0</span>
                 </a>
                 <a href="#"><i class="far fa-user"></i></a>
             </div>
@@ -138,35 +135,39 @@
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">Encuentra el regalo ideal por
                 edad</h2>
-            <div class="ages-grid">
-                <a href="#bebes" class="age-card card-pink">
-                    <div class="age-content">
-                        <span class="age-label">0-2 años</span>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1515488042361-25f4682ee084?auto=format&fit=crop&w=500&q=60"
+                        alt="Bebés">
+                    <div class="category-overlay">
                         <h3>Bebés</h3>
-                        <p>Suaves, seguros y estimulantes</p>
+                        <p>0 - 2 años</p>
                     </div>
-                </a>
-                <a href="#3-5" class="age-card card-green">
-                    <div class="age-content">
-                        <span class="age-label">Pequeños exploradores</span>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=500&q=60"
+                        alt="3 a 5 años">
+                    <div class="category-overlay">
                         <h3>3 a 5 años</h3>
-                        <p>Creatividad e imaginación</p>
+                        <p>Preescolar</p>
                     </div>
-                </a>
-                <a href="#6-9" class="age-card card-blue">
-                    <div class="age-content">
-                        <span class="age-label">Aventureros curiosos</span>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=500&q=60"
+                        alt="6 a 9 años">
+                    <div class="category-overlay">
                         <h3>6 a 9 años</h3>
-                        <p>Aprendizaje y diversión</p>
+                        <p>Escolares</p>
                     </div>
-                </a>
-                <a href="#10-12" class="age-card card-orange">
-                    <div class="age-content">
-                        <span class="age-label">Desafíos inteligentes</span>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=500&q=60"
+                        alt="10 a 12 años">
+                    <div class="category-overlay">
                         <h3>10 a 12 años</h3>
-                        <p>Tecnología y estrategia</p>
+                        <p>Pre-adolescentes</p>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>

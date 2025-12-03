@@ -161,15 +161,21 @@ ul {
     align-items: center;
     height: 80px;
     padding: 10px 20px;
+    max-width: var(--container-width);
+    /* Ensure it respects container width */
+    margin: 0 auto;
+}
+
+.logo {
+    flex-shrink: 0;
+    /* Prevent logo from shrinking */
 }
 
 .logo a {
     font-family: var(--font-body);
-    /* Looks sans-serif in reference */
     font-size: 1.8rem;
     font-weight: 800;
     color: #D32F2F;
-    /* Red */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -186,7 +192,6 @@ ul {
 
 .logo .highlight {
     color: #FBC02D;
-    /* Gold */
 }
 
 .search-bar {
@@ -196,10 +201,20 @@ ul {
     position: relative;
 }
 
+.user-actions {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-shrink: 0;
+    /* Prevent icons from shrinking */
+}
+
 .secondary-nav {
     background-color: white;
     border-top: 1px solid #f0f0f0;
     padding: 12px 0;
+    text-align: center;
+    /* Ensure text alignment */
 }
 
 .secondary-nav .container {
@@ -208,6 +223,7 @@ ul {
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .secondary-nav a {
