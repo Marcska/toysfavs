@@ -623,49 +623,6 @@ ul {
     margin-bottom: 10px;
 }
 
-/* Offers Section */
-.offers {
-    background: linear-gradient(rgba(183, 28, 28, 0.9), rgba(183, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1920&q=80');
-    /* Fallback image */
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-
-.offers-text h2 {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-}
-
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 40px 0;
-    flex-wrap: wrap;
-}
-
-.time-box {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 20px;
-    border-radius: var(--radius-sm);
-    min-width: 100px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.time-box span {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    color: var(--accent-gold);
-}
-
 /* Testimonials */
 .testimonials-grid {
     display: grid;
