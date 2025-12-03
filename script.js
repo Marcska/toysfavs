@@ -12,7 +12,7 @@ if (mobileMenuBtn) {
 
 // State
 let cart = [];
-const WHATSAPP_NUMBER = "525512345678"; // Replace with real number
+const WHATSAPP_NUMBER = "525519697307"; // Updated number
 
 // DOM Elements
 const productsContainer = document.getElementById('products-container');
@@ -213,11 +213,12 @@ window.onclick = function (event) {
 };
 
 // Search Functionality
-const searchInput = document.querySelector('.search-bar input');
-const searchBtn = document.querySelector('.search-bar button');
+const searchInputs = document.querySelectorAll('.search-bar input, .mobile-search input');
+const searchBtns = document.querySelectorAll('.search-bar button, .mobile-search button');
 
-function performSearch() {
-    const query = searchInput.value.toLowerCase();
+function performSearch(query) {
+    if (!query) return;
+
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(query) ||
         product.category.toLowerCase().includes(query)
@@ -232,17 +233,21 @@ function performSearch() {
     }
 }
 
-if (searchBtn) {
-    searchBtn.addEventListener('click', performSearch);
-}
+searchBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Find the sibling input
+        const input = btn.parentElement.querySelector('input');
+        if (input) performSearch(input.value.toLowerCase());
+    });
+});
 
-if (searchInput) {
-    searchInput.addEventListener('keypress', (e) => {
+searchInputs.forEach(input => {
+    input.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            performSearch();
+            performSearch(input.value.toLowerCase());
         }
     });
-}
+});
 
 // Category Filtering
 function setupCategoryFilters() {
@@ -329,14 +334,14 @@ const modalPrice = document.getElementById('modal-product-price');
 const modalOldPrice = document.getElementById('modal-product-old-price');
 const modalAddToCartBtn = document.getElementById('modal-add-to-cart');
 
-window.openProductModal = function(productId) {
+window.openProductModal = function (productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
 
     // Populate Modal Data
     modalImage.src = product.image;
     modalImage.alt = product.name;
-    
+
     modalBadge.innerText = product.badge || 'OFERTA';
     modalBadge.className = 'badge ' + (product.badgeClass || '');
     if (!product.badge) modalBadge.style.display = 'none';
@@ -345,7 +350,7 @@ window.openProductModal = function(productId) {
     modalName.innerText = product.name;
     modalRating.innerHTML = `${getStars(product.rating)} <span>(${Math.floor(Math.random() * 200) + 50} opiniones)</span>`;
     modalDescription.innerText = product.description || 'Sin descripción disponible.';
-    
+
     modalPrice.innerText = `$${product.price.toFixed(2)}`;
     if (product.oldPrice) {
         modalOldPrice.innerText = `$${product.oldPrice.toFixed(2)}`;
@@ -355,7 +360,7 @@ window.openProductModal = function(productId) {
     }
 
     // Setup Add to Cart Button
-    modalAddToCartBtn.onclick = function() {
+    modalAddToCartBtn.onclick = function () {
         addToCart(product.id);
         productModal.classList.remove('active');
     };
