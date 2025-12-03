@@ -34,22 +34,56 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderProducts() {
     if (!productsContainer) return;
 
-    productsContainer.innerHTML = products.map(product => `
-        <article class="product-card">
-            ${product.badge ? `<div class="product-badge ${product.badgeClass}">${product.badge}</div>` : ''}
-            <div class="product-img-placeholder" data-label="${product.name}">
-                <i class="${product.icon}"></i>
+    productsContainer.innerHTML = ''; // Clear existing products
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+
+        // Determine icon based on category or random
+        let iconClass = 'fas fa-gift';
+        if (product.category === 'Bebés') iconClass = 'fas fa-baby';
+        if (product.category === '3-5 años') iconClass = 'fas fa-child';
+        if (product.category === '6-9 años') iconClass = 'fas fa-gamepad';
+        if (product.category === '10-12 años') iconClass = 'fas fa-headset';
+        if (product.badge === 'Más vendido') iconClass = 'fas fa-fire';
+        if (product.badge === 'Nuevo') iconClass = 'fas fa-star';
+
+        productCard.innerHTML = `
+            <div class="product-icon-top"><i class="${iconClass}"></i></div>
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
             </div>
             <div class="product-info">
+                <span class="product-category">${product.badge || 'OFERTA'}</span>
                 <h3>${product.name}</h3>
-                <div class="rating">
-                    ${getStarRating(product.rating)}
+                <div class="product-rating">
+                    ${getStars(product.rating)} <span>(${Math.floor(Math.random() * 200) + 50})</span>
                 </div>
-                <p class="price">$${product.price.toFixed(2)} ${product.oldPrice ? `<span class="old-price">$${product.oldPrice.toFixed(2)}</span>` : ''}</p>
-                <button class="btn btn-secondary" onclick="addToCart(${product.id})">Agregar al carrito</button>
+                <div class="product-price">
+                    <span class="current-price">$${product.price.toFixed(2)}</span>
+                    ${product.oldPrice ? `<span class="old-price">$${product.oldPrice.toFixed(2)}</span>` : ''}
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
+                    Agregar al carrito
+                </button>
             </div>
-        </article>
-    `).join('');
+        `;
+        productsContainer.appendChild(productCard);
+    });
+}
+
+function getStars(rating) {
+    let stars = '';
+    for (let i = 0; i < 5; i++) {
+        if (i < Math.floor(rating)) {
+            stars += '<i class="fas fa-star"></i>';
+        } else if (i === Math.floor(rating) && rating % 1 !== 0) {
+            stars += '<i class="fas fa-star-half-alt"></i>';
+        } else {
+            stars += '<i class="far fa-star"></i>';
+        }
+    }
+    return stars;
 }
 
 // Helper: Generate Star Rating HTML
