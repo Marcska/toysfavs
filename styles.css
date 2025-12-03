@@ -140,6 +140,24 @@ ul {
 }
 
 /* Header */
+.top-bar {
+    background-color: var(--bg-light);
+    padding: 8px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    /* Center the text */
+}
+
+.top-bar p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center flex content */
+    gap: 10px;
+}
+
 .header {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -170,9 +188,41 @@ ul {
 
 .search-bar {
     flex: 1;
-    max-width: 450px;
-    margin: 0 30px;
+    max-width: 600px;
+    /* Wider search bar */
+    margin: 0 auto;
+    /* Center it */
     position: relative;
+}
+
+.secondary-nav {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.secondary-nav .container {
+    display: flex;
+    justify-content: center;
+    /* Center the nav items */
+    gap: 30px;
+}
+
+.secondary-nav a {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.secondary-nav a:hover {
+    color: var(--primary-red);
+}
+
+.secondary-nav i {
+    color: #888;
 }
 
 .search-bar input {
