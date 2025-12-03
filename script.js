@@ -226,23 +226,23 @@ function performSearch() {
     const productsGrid = document.querySelector('.products-grid');
     if (filteredProducts.length > 0) {
         productsGrid.innerHTML = filteredProducts.map(product => `
-                <div class="product-card">
-                    <div class="product-image">
-                        <span class="badge">Nuevo</span>
-                        <img src="${product.image}" alt="${product.name}">
-                    </div>
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <div class="rating">
-                            ${getStars(product.rating)}
-                        </div>
-                        <p class="price">$${product.price}</p>
-                        <button class="btn-add" onclick="addToCart(${product.id})">
-                            Agregar al carrito
-                        </button>
-                    </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="badge">Nuevo</span>
+                    <img src="${product.image}" alt="${product.name}">
                 </div>
-            `).join('');
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <div class="rating">
+                        ${getStars(product.rating)}
+                    </div>
+                    <p class="price">$${product.price}</p>
+                    <button class="btn-add" onclick="addToCart(${product.id})">
+                        Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        `).join('');
     } else {
         productsGrid.innerHTML = '<p style="text-align: center; width: 100%; grid-column: 1/-1;">No se encontraron productos.</p>';
     }
