@@ -13,7 +13,7 @@ const products = [
         icon: "fas fa-baby",
         rating: 4.8,
         description: "Crece de recién nacida a niña. Incluye accesorios interactivos.",
-        image: "https://placehold.co/400x400/FFE4E1/333333?text=Baby+Alive+Lala+GooGoo"
+        image: "assets/images/1.jpg"
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const products = [
         icon: "fas fa-shapes",
         rating: 4.6,
         description: "Cubo didáctico para motricidad fina y estimulación temprana.",
-        image: "https://placehold.co/400x400/FFF8DC/333333?text=Cubo+Actividades+Mia"
+        image: "assets/images/2.jpg"
     },
     {
         id: 3,
@@ -39,7 +39,7 @@ const products = [
         icon: "fas fa-baby-carriage",
         rating: 4.3,
         description: "Muñeca clásica interactiva para cuidados básicos.",
-        image: "https://placehold.co/400x400/FFC0CB/333333?text=Nenuco+Adivina"
+        image: "assets/images/3.jpg"
     },
     {
         id: 4,
@@ -52,7 +52,7 @@ const products = [
         icon: "fas fa-bus",
         rating: 4.7,
         description: "Autobús musical con luces y sonidos de la serie.",
-        image: "https://placehold.co/400x400/FFFF00/333333?text=Bus+Cocomelon"
+        image: "assets/images/4.jpg"
     },
 
     // =========================================
@@ -69,7 +69,7 @@ const products = [
         icon: "fas fa-dog",
         rating: 4.8,
         description: "Mascota electrónica que camina y hace sonidos reales.",
-        image: "https://placehold.co/400x400/F0E68C/333333?text=FurReal+Walkalots"
+        image: "assets/images/5.jpg"
     },
     {
         id: 6,
@@ -82,7 +82,7 @@ const products = [
         icon: "fas fa-shield-alt",
         rating: 4.9,
         description: "Peluche con linterna y frases de la patrulla canina.",
-        image: "https://placehold.co/400x400/1E90FF/FFFFFF?text=Chase+Paw+Patrol"
+        image: "assets/images/6.jpg"
     },
     {
         id: 7,
@@ -95,7 +95,7 @@ const products = [
         icon: "fas fa-truck-monster",
         rating: 4.9,
         description: "Camión de rescate transformable con figura de Marshall.",
-        image: "https://placehold.co/400x400/FF0000/FFFFFF?text=Marshall+Bomberos"
+        image: "assets/images/7.jpg"
     },
     {
         id: 8,
@@ -108,7 +108,7 @@ const products = [
         icon: "fas fa-motorcycle",
         rating: 4.5,
         description: "Set de modelado para crear y entregar pizzas de juguete.",
-        image: "https://placehold.co/400x400/FFA500/FFFFFF?text=PlayDoh+Moto+Pizza"
+        image: "assets/images/8.jpg"
     },
     {
         id: 9,
@@ -121,7 +121,7 @@ const products = [
         icon: "fas fa-water",
         rating: 4.7,
         description: "Alberca resistente con diseño de Bluey y Bingo.",
-        image: "https://placehold.co/400x400/87CEEB/333333?text=Alberca+Bluey"
+        image: "assets/images/9.jpg"
     },
     {
         id: 10,
@@ -134,7 +134,7 @@ const products = [
         icon: "fas fa-robot",
         rating: 4.5,
         description: "Laboratorio para crear armaduras de Iron Man con masa.",
-        image: "https://placehold.co/400x400/B22222/FFFFFF?text=PlayDoh+Iron+Man"
+        image: "assets/images/10.jpg"
     },
     {
         id: 11,
@@ -147,7 +147,7 @@ const products = [
         icon: "fas fa-spider",
         rating: 4.4,
         description: "Figura de Spider-Man con acción de telaraña Play-Doh.",
-        image: "https://placehold.co/400x400/FF4500/FFFFFF?text=PlayDoh+Spiderman"
+        image: "assets/images/11.jpg"
     },
     {
         id: 12,
@@ -160,7 +160,7 @@ const products = [
         icon: "fas fa-birthday-cake",
         rating: 4.6,
         description: "Set básico de repostería creativa.",
-        image: "https://placehold.co/400x400/FF69B4/FFFFFF?text=PlayDoh+Pasteles"
+        image: "assets/images/12.jpg"
     },
     {
         id: 13,
@@ -173,7 +173,7 @@ const products = [
         icon: "fas fa-users",
         rating: 4.4,
         description: "Set de figuras intercambiables Pinypon.",
-        image: "https://placehold.co/400x400/FF1493/FFFFFF?text=Pinypon"
+        image: "assets/images/13.jpg"
     },
     {
         id: 14,
@@ -186,7 +186,7 @@ const products = [
         icon: "fas fa-palette",
         rating: 4.0,
         description: "Botes de repuesto de masa Play-Doh.",
-        image: "https://placehold.co/400x400/008000/FFFFFF?text=PlayDoh+Pack"
+        image: "assets/images/14.jpg"
     },
     {
         id: 15,
@@ -199,7 +199,7 @@ const products = [
         icon: "fas fa-dog",
         rating: 4.2,
         description: "Mascota electrónica interactiva con sonidos graciosos.",
-        image: "https://placehold.co/400x400/8B4513/FFFFFF?text=Ugglys+Pug"
+        image: "assets/images/15.jpg"
     },
 
     // =========================================
@@ -216,7 +216,7 @@ const products = [
         icon: "fas fa-crosshairs",
         rating: 4.7,
         description: "Lanzador de alta capacidad con sistema de recarga fácil.",
-        image: "https://placehold.co/400x400/00008B/FFFFFF?text=Nerf+Infinite"
+        image: "assets/images/16.jpg"
     },
     {
         id: 17,
@@ -229,7 +229,7 @@ const products = [
         icon: "fas fa-dragon",
         rating: 4.5,
         description: "Lanzador con diseño de dinosaurio T-Rex.",
-        image: "https://placehold.co/400x400/228B22/FFFFFF?text=Nerf+Dino+Squad"
+        image: "assets/images/17.jpg"
     },
     {
         id: 18,
@@ -242,7 +242,7 @@ const products = [
         icon: "fas fa-bullseye",
         rating: 4.5,
         description: "Diseñado para manos pequeñas, fácil de cargar.",
-        image: "https://placehold.co/400x400/1E90FF/FFFFFF?text=Nerf+Elite+Jr"
+        image: "assets/images/18.jpg"
     },
     {
         id: 19,
@@ -255,7 +255,7 @@ const products = [
         icon: "fas fa-paw",
         rating: 4.4,
         description: "Lanzador con diseño de león.",
-        image: "https://placehold.co/400x400/FF8C00/FFFFFF?text=Nerf+Lionfury"
+        image: "assets/images/19.jpg"
     },
     {
         id: 20,
@@ -268,7 +268,7 @@ const products = [
         icon: "fas fa-crosshairs",
         rating: 4.5,
         description: "Lanzador de precisión para puntería.",
-        image: "https://placehold.co/400x400/4682B4/FFFFFF?text=Nerf+Pinpoint"
+        image: "assets/images/20.jpg"
     },
     {
         id: 21,
@@ -281,7 +281,7 @@ const products = [
         icon: "fas fa-gamepad",
         rating: 4.8,
         description: "Set de batalla con figura de Sonic y robot villano.",
-        image: "https://placehold.co/400x400/0000CD/FFFFFF?text=Sonic+Battle+Set"
+        image: "assets/images/21.jpg"
     },
     {
         id: 22,
@@ -294,7 +294,7 @@ const products = [
         icon: "fas fa-box-open",
         rating: 4.5,
         description: "Peluche sorpresa del popular juego de Roblox.",
-        image: "https://placehold.co/400x400/800080/FFFFFF?text=Adopt+Me+Peluche"
+        image: "assets/images/22.jpg"
     },
 
     // =========================================
@@ -311,7 +311,7 @@ const products = [
         icon: "fas fa-money-bill-wave",
         rating: 4.6,
         description: "Versión rápida y activa del clásico Monopoly.",
-        image: "https://placehold.co/400x400/FFD700/333333?text=Monopoly+Knockout"
+        image: "assets/images/23.jpg"
     },
     {
         id: 24,
@@ -324,7 +324,7 @@ const products = [
         icon: "fas fa-mouse",
         rating: 4.6,
         description: "Juego de construcción de trampas y acción en cadena.",
-        image: "https://placehold.co/400x400/DC143C/FFFFFF?text=Atrapa+Ratones"
+        image: "assets/images/24.jpg"
     },
     {
         id: 25,
@@ -337,7 +337,7 @@ const products = [
         icon: "fas fa-user-md",
         rating: 4.7,
         description: "Pon a prueba tu pulso y saca las piezas sin tocar los bordes.",
-        image: "https://placehold.co/400x400/FFFF00/333333?text=Operando"
+        image: "assets/images/25.jpg"
     },
     {
         id: 26,
@@ -350,7 +350,7 @@ const products = [
         icon: "fas fa-globe-americas",
         rating: 4.3,
         description: "El clásico juego de viajes edición Universal.",
-        image: "https://placehold.co/400x400/000080/FFFFFF?text=Turista+Mundial"
+        image: "assets/images/26.jpg"
     },
     {
         id: 27,
@@ -363,7 +363,7 @@ const products = [
         icon: "fas fa-hourglass-half",
         rating: 4.5,
         description: "Coloca las piezas antes de que salten por el aire.",
-        image: "https://placehold.co/400x400/FFFF00/333333?text=Destreza"
+        image: "assets/images/27.jpg"
     },
     {
         id: 28,
@@ -376,7 +376,7 @@ const products = [
         icon: "fas fa-drum",
         rating: 4.4,
         description: "El juego que te persigue. Cuidado con la selva.",
-        image: "https://placehold.co/400x400/8B4513/FFFFFF?text=Jumanji"
+        image: "assets/images/28.jpg"
     },
     {
         id: 29,
@@ -389,7 +389,7 @@ const products = [
         icon: "fas fa-dice",
         rating: 4.0,
         description: "Consola de juegos electrónicos de mesa.",
-        image: "https://placehold.co/400x400/808080/FFFFFF?text=Hypershot"
+        image: "assets/images/29.jpg"
     },
     {
         id: 30,
@@ -402,7 +402,7 @@ const products = [
         icon: "fas fa-piggy-bank",
         rating: 4.1,
         description: "Juego de acción y suerte para niños.",
-        image: "https://placehold.co/400x400/FFC0CB/333333?text=Puerquito+Enojon"
+        image: "assets/images/30.jpg"
     },
 
     // =========================================
@@ -419,7 +419,7 @@ const products = [
         icon: "fas fa-mask",
         rating: 5.0,
         description: "Réplica 1:1 detallada del casco de Norman Osborn.",
-        image: "https://placehold.co/400x400/4B0082/FFFFFF?text=Casco+Duende+Verde"
+        image: "assets/images/31.jpg"
     },
     {
         id: 32,
@@ -432,7 +432,7 @@ const products = [
         icon: "fas fa-spider",
         rating: 5.0,
         description: "Máscara electrónica con ojos expresivos ajustables.",
-        image: "https://placehold.co/400x400/DC143C/FFFFFF?text=Mascara+SpiderMan"
+        image: "assets/images/32.jpg"
     },
     {
         id: 33,
@@ -445,7 +445,7 @@ const products = [
         icon: "fas fa-robot",
         rating: 5.0,
         description: "Puzzle 3D detallado de la armadura Hulkbuster con soporte.",
-        image: "https://placehold.co/400x400/8B0000/FFFFFF?text=Hulkbuster+4D"
+        image: "assets/images/33.jpg"
     },
     {
         id: 34,
@@ -458,7 +458,7 @@ const products = [
         icon: "fas fa-shield-alt",
         rating: 4.9,
         description: "Modelo para armar en 3D del escudo icónico.",
-        image: "https://placehold.co/400x400/0000CD/FFFFFF?text=Escudo+Capitan"
+        image: "assets/images/34.jpg"
     },
     {
         id: 35,
@@ -471,7 +471,7 @@ const products = [
         icon: "fas fa-tv",
         rating: 4.8,
         description: "Figura de colección de Homero King Kong.",
-        image: "https://placehold.co/400x400/FFFF00/333333?text=King+Homer"
+        image: "assets/images/35.jpg"
     },
 
     // =========================================
@@ -488,7 +488,7 @@ const products = [
         icon: "fas fa-microscope",
         rating: 4.3,
         description: "Juguete STEAM para explorar texturas como un científico.",
-        image: "https://placehold.co/400x400/00FFFF/333333?text=Microscopio+PlayDoh"
+        image: "assets/images/36.jpg"
     },
     {
         id: 37,
@@ -501,6 +501,6 @@ const products = [
         icon: "fas fa-dog",
         rating: 4.8,
         description: "El clásico perro de resorte de las películas de Pixar.",
-        image: "https://placehold.co/400x400/A52A2A/FFFFFF?text=Slinky+Dog"
+        image: "assets/images/37.jpg"
     }
 ];
