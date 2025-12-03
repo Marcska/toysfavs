@@ -203,20 +203,29 @@ if (checkoutBtn) {
         const encodedMessage = encodeURIComponent(message);
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
     });
-    // Search Functionality
-    const searchInput = document.querySelector('.search-bar input');
-    const searchBtn = document.querySelector('.search-bar button');
+}
 
-    function performSearch() {
-        const query = searchInput.value.toLowerCase();
-        const filteredProducts = products.filter(product =>
-            product.name.toLowerCase().includes(query) ||
-            product.category.toLowerCase().includes(query)
-        );
+// Close Modal on Outside Click
+window.onclick = function (event) {
+    if (event.target == cartModal) {
+        cartModal.style.display = "none";
+    }
+};
 
-        const productsGrid = document.querySelector('.products-grid');
-        if (filteredProducts.length > 0) {
-            productsGrid.innerHTML = filteredProducts.map(product => `
+// Search Functionality
+const searchInput = document.querySelector('.search-bar input');
+const searchBtn = document.querySelector('.search-bar button');
+
+function performSearch() {
+    const query = searchInput.value.toLowerCase();
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(query) ||
+        product.category.toLowerCase().includes(query)
+    );
+
+    const productsGrid = document.querySelector('.products-grid');
+    if (filteredProducts.length > 0) {
+        productsGrid.innerHTML = filteredProducts.map(product => `
                 <div class="product-card">
                     <div class="product-image">
                         <span class="badge">Nuevo</span>
@@ -234,28 +243,28 @@ if (checkoutBtn) {
                     </div>
                 </div>
             `).join('');
-        } else {
-            productsGrid.innerHTML = '<p style="text-align: center; width: 100%; grid-column: 1/-1;">No se encontraron productos.</p>';
+    } else {
+        productsGrid.innerHTML = '<p style="text-align: center; width: 100%; grid-column: 1/-1;">No se encontraron productos.</p>';
+    }
+
+    // Scroll to products
+    const productsSection = document.getElementById('productos');
+    if (productsSection) {
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+if (searchBtn) {
+    searchBtn.addEventListener('click', performSearch);
+}
+
+if (searchInput) {
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performSearch();
         }
-
-        // Scroll to products
-        const productsSection = document.getElementById('productos');
-        if (productsSection) {
-            productsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    if (searchBtn) {
-        searchBtn.addEventListener('click', performSearch);
-    }
-
-    if (searchInput) {
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
-    }
+    });
+}
 
 });
 
