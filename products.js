@@ -1,5 +1,7 @@
 const products = [
-    // --- Categoría: Bebés / Estimulación (0-3 años) ---
+    // =========================================
+    // CATEGORÍA: BEBÉS Y ESTIMULACIÓN (0-3 AÑOS)
+    // =========================================
     {
         id: 1,
         name: "Baby Alive Muñeca Grows Up Lala GooGoo",
@@ -9,35 +11,38 @@ const products = [
         badge: "Interactivo",
         badgeClass: "highlight",
         icon: "fas fa-baby",
-        rating: 4.5,
-        image: "https://placehold.co/300x300?text=Baby+Alive+Grows+Up"
+        rating: 4.8,
+        description: "Crece de recién nacida a niña. Incluye accesorios interactivos.",
+        image: "https://placehold.co/400x400/FFE4E1/333333?text=Baby+Alive+Lala+GooGoo"
     },
     {
-        id: 5,
-        name: "Dear Mia Little Liz | Cubo de Actividades",
+        id: 2,
+        name: "Dear Mia Little Liz | Cubo de Actividades Montessori",
         price: 350.00,
         oldPrice: null,
         category: "bebes",
-        badge: "Montessori",
+        badge: "Educativo",
         badgeClass: "success",
         icon: "fas fa-shapes",
         rating: 4.6,
-        image: "https://placehold.co/300x300?text=Cubo+Actividades"
+        description: "Cubo didáctico para motricidad fina y estimulación temprana.",
+        image: "https://placehold.co/400x400/FFF8DC/333333?text=Cubo+Actividades+Mia"
     },
     {
-        id: 6,
+        id: 3,
         name: "Muñeca Bebe Nenuco, Adivina Lo Que Veo",
         price: 610.00,
         oldPrice: null,
         category: "bebes",
         badge: null,
         badgeClass: "",
-        icon: "fas fa-baby",
+        icon: "fas fa-baby-carriage",
         rating: 4.3,
-        image: "https://placehold.co/300x300?text=Nenuco+Adivina"
+        description: "Muñeca clásica interactiva para cuidados básicos.",
+        image: "https://placehold.co/400x400/FFC0CB/333333?text=Nenuco+Adivina"
     },
     {
-        id: 15,
+        id: 4,
         name: "Bus Escolar Cocomelon 2 En 1",
         price: 750.00,
         oldPrice: null,
@@ -46,60 +51,41 @@ const products = [
         badgeClass: "info",
         icon: "fas fa-bus",
         rating: 4.7,
-        image: "https://placehold.co/300x300?text=Bus+Cocomelon"
+        description: "Autobús musical con luces y sonidos de la serie.",
+        image: "https://placehold.co/400x400/FFFF00/333333?text=Bus+Cocomelon"
     },
 
-    // --- Categoría: Preescolar (3-5 años) ---
+    // =========================================
+    // CATEGORÍA: PREESCOLAR (3-5 AÑOS)
+    // =========================================
     {
-        id: 2,
-        name: "FurReal Walkalots Grandes Paseos - Mascota interactiva",
+        id: 5,
+        name: "FurReal Walkalots Grandes Paseos - Mascota Interactiva",
         price: 655.00,
         oldPrice: null,
         category: "3-5",
-        badge: "Top Regalo",
+        badge: "Más Vendido",
         badgeClass: "highlight",
         icon: "fas fa-dog",
         rating: 4.8,
-        image: "https://placehold.co/300x300?text=FurReal+Walkalots"
+        description: "Mascota electrónica que camina y hace sonidos reales.",
+        image: "https://placehold.co/400x400/F0E68C/333333?text=FurReal+Walkalots"
     },
     {
-        id: 8,
-        name: "Play-Doh Set Moto Repartidora de Pizzas",
-        price: 1000.00,
-        oldPrice: null,
-        category: "3-5",
-        badge: null,
-        badgeClass: "",
-        icon: "fas fa-motorcycle",
-        rating: 4.5,
-        image: "https://placehold.co/300x300?text=PlayDoh+Pizza"
-    },
-    {
-        id: 14,
-        name: "Alberca Infantil Inflable Bluey",
-        price: 530.00,
-        oldPrice: null,
-        category: "3-5",
-        badge: "Verano",
-        badgeClass: "info",
-        icon: "fas fa-swimming-pool",
-        rating: 4.7,
-        image: "https://placehold.co/300x300?text=Alberca+Bluey"
-    },
-    {
-        id: 16,
+        id: 6,
         name: "Paw Patrol: Chase Guardián Peluche Interactivo",
         price: 955.00,
         oldPrice: null,
         category: "3-5",
         badge: "Luz y Sonido",
         badgeClass: "highlight",
-        icon: "fas fa-paw",
+        icon: "fas fa-shield-alt",
         rating: 4.9,
-        image: "https://placehold.co/300x300?text=Chase+Paw+Patrol"
+        description: "Peluche con linterna y frases de la patrulla canina.",
+        image: "https://placehold.co/400x400/1E90FF/FFFFFF?text=Chase+Paw+Patrol"
     },
     {
-        id: 17,
+        id: 7,
         name: "Paw Patrol Camión de Bomberos Marshall",
         price: 1350.00,
         oldPrice: null,
@@ -107,35 +93,38 @@ const products = [
         badge: null,
         badgeClass: "",
         icon: "fas fa-truck-monster",
-        rating: 4.8,
-        image: "https://placehold.co/300x300?text=Marshall+FireTruck"
+        rating: 4.9,
+        description: "Camión de rescate transformable con figura de Marshall.",
+        image: "https://placehold.co/400x400/FF0000/FFFFFF?text=Marshall+Bomberos"
     },
     {
-        id: 19,
-        name: "PIN Y PON Pinypon",
-        price: 710.00,
+        id: 8,
+        name: "Play-Doh Set Moto Repartidora de Pizzas",
+        price: 1000.00,
         oldPrice: null,
         category: "3-5",
-        badge: null,
-        badgeClass: "",
-        icon: "fas fa-users",
-        rating: 4.4,
-        image: "https://placehold.co/300x300?text=Pinypon"
-    },
-    {
-        id: 20,
-        name: "Plastilina Play-Doh 2 piezas",
-        price: 50.00,
-        oldPrice: null,
-        category: "3-5",
-        badge: "Económico",
+        badge: "Creativo",
         badgeClass: "success",
-        icon: "fas fa-palette",
-        rating: 4.0,
-        image: "https://placehold.co/300x300?text=PlayDoh+Pack"
+        icon: "fas fa-motorcycle",
+        rating: 4.5,
+        description: "Set de modelado para crear y entregar pizzas de juguete.",
+        image: "https://placehold.co/400x400/FFA500/FFFFFF?text=PlayDoh+Moto+Pizza"
     },
     {
-        id: 31,
+        id: 9,
+        name: "Alberca Infantil Inflable Bluey",
+        price: 530.00,
+        oldPrice: null,
+        category: "3-5",
+        badge: "Verano",
+        badgeClass: "info",
+        icon: "fas fa-water",
+        rating: 4.7,
+        description: "Alberca resistente con diseño de Bluey y Bingo.",
+        image: "https://placehold.co/400x400/87CEEB/333333?text=Alberca+Bluey"
+    },
+    {
+        id: 10,
         name: "Play-Doh Iron Man Armor Maker Lab",
         price: 360.00,
         oldPrice: null,
@@ -144,10 +133,11 @@ const products = [
         badgeClass: "",
         icon: "fas fa-robot",
         rating: 4.5,
-        image: "https://placehold.co/300x300?text=PlayDoh+IronMan"
+        description: "Laboratorio para crear armaduras de Iron Man con masa.",
+        image: "https://placehold.co/400x400/B22222/FFFFFF?text=PlayDoh+Iron+Man"
     },
     {
-        id: 32,
+        id: 11,
         name: "Play-Doh Marvel Spider-Man Lanza y Atrapa",
         price: 360.00,
         oldPrice: null,
@@ -156,60 +146,80 @@ const products = [
         badgeClass: "",
         icon: "fas fa-spider",
         rating: 4.4,
-        image: "https://placehold.co/300x300?text=PlayDoh+Spiderman"
+        description: "Figura de Spider-Man con acción de telaraña Play-Doh.",
+        image: "https://placehold.co/400x400/FF4500/FFFFFF?text=PlayDoh+Spiderman"
     },
     {
-        id: 34,
+        id: 12,
         name: "Play-Doh Kitchen Creations Pasteles Divertidos",
         price: 240.00,
         oldPrice: null,
         category: "3-5",
-        badge: null,
-        badgeClass: "",
+        badge: "Oferta",
+        badgeClass: "warning",
         icon: "fas fa-birthday-cake",
         rating: 4.6,
-        image: "https://placehold.co/300x300?text=PlayDoh+Pasteles"
+        description: "Set básico de repostería creativa.",
+        image: "https://placehold.co/400x400/FF69B4/FFFFFF?text=PlayDoh+Pasteles"
     },
-
-    // --- Categoría: Escolar / Acción (6-9 años) ---
     {
-        id: 7,
-        name: "NERF - Lanzador Elite Jr Flyer Easy-Play",
-        price: 155.00,
+        id: 13,
+        name: "PIN Y PON Pinypon",
+        price: 710.00,
         oldPrice: null,
-        category: "6-9",
+        category: "3-5",
+        badge: null,
+        badgeClass: "",
+        icon: "fas fa-users",
+        rating: 4.4,
+        description: "Set de figuras intercambiables Pinypon.",
+        image: "https://placehold.co/400x400/FF1493/FFFFFF?text=Pinypon"
+    },
+    {
+        id: 14,
+        name: "Plastilina Play-Doh 2 piezas",
+        price: 50.00,
+        oldPrice: null,
+        category: "3-5",
         badge: "Básico",
         badgeClass: "",
-        icon: "fas fa-crosshairs",
-        rating: 4.5,
-        image: "https://placehold.co/300x300?text=NERF+Elite+Jr"
+        icon: "fas fa-palette",
+        rating: 4.0,
+        description: "Botes de repuesto de masa Play-Doh.",
+        image: "https://placehold.co/400x400/008000/FFFFFF?text=PlayDoh+Pack"
     },
     {
-        id: 9,
+        id: 15,
+        name: "The Ugglys Pug Electronic Pet",
+        price: 550.00,
+        oldPrice: null,
+        category: "3-5",
+        badge: "Divertido",
+        badgeClass: "",
+        icon: "fas fa-dog",
+        rating: 4.2,
+        description: "Mascota electrónica interactiva con sonidos graciosos.",
+        image: "https://placehold.co/400x400/8B4513/FFFFFF?text=Ugglys+Pug"
+    },
+
+    // =========================================
+    // CATEGORÍA: ESCOLAR Y ACCIÓN (6-9 AÑOS)
+    // =========================================
+    {
+        id: 16,
         name: "Nerf N Series Lanzador Infinite (80 Dardos)",
         price: 610.00,
         oldPrice: null,
         category: "6-9",
-        badge: "Potente",
+        badge: "Novedad",
         badgeClass: "highlight",
-        icon: "fas fa-bullseye",
+        icon: "fas fa-crosshairs",
         rating: 4.7,
-        image: "https://placehold.co/300x300?text=Nerf+Infinite"
+        description: "Lanzador de alta capacidad con sistema de recarga fácil.",
+        image: "https://placehold.co/400x400/00008B/FFFFFF?text=Nerf+Infinite"
     },
     {
-        id: 10,
-        name: "Nerf Junior Wild Lionfury",
-        price: 205.00,
-        oldPrice: null,
-        category: "6-9",
-        badge: null,
-        badgeClass: "",
-        icon: "fas fa-paw",
-        rating: 4.4,
-        image: "https://placehold.co/300x300?text=Nerf+Lionfury"
-    },
-    {
-        id: 11,
+        id: 17,
         name: "Nerf Dino Squad",
         price: 210.00,
         oldPrice: null,
@@ -218,10 +228,37 @@ const products = [
         badgeClass: "",
         icon: "fas fa-dragon",
         rating: 4.5,
-        image: "https://placehold.co/300x300?text=Nerf+Dino+Squad"
+        description: "Lanzador con diseño de dinosaurio T-Rex.",
+        image: "https://placehold.co/400x400/228B22/FFFFFF?text=Nerf+Dino+Squad"
     },
     {
-        id: 12,
+        id: 18,
+        name: "NERF Lanzador Elite Jr Flyer",
+        price: 155.00,
+        oldPrice: null,
+        category: "6-9",
+        badge: "Económico",
+        badgeClass: "success",
+        icon: "fas fa-bullseye",
+        rating: 4.5,
+        description: "Diseñado para manos pequeñas, fácil de cargar.",
+        image: "https://placehold.co/400x400/1E90FF/FFFFFF?text=Nerf+Elite+Jr"
+    },
+    {
+        id: 19,
+        name: "Nerf Junior Wild Lionfury",
+        price: 205.00,
+        oldPrice: null,
+        category: "6-9",
+        badge: null,
+        badgeClass: "",
+        icon: "fas fa-paw",
+        rating: 4.4,
+        description: "Lanzador con diseño de león.",
+        image: "https://placehold.co/400x400/FF8C00/FFFFFF?text=Nerf+Lionfury"
+    },
+    {
+        id: 20,
         name: "NERF N Series Pinpoint (18 Dardos)",
         price: 290.00,
         oldPrice: null,
@@ -230,10 +267,11 @@ const products = [
         badgeClass: "",
         icon: "fas fa-crosshairs",
         rating: 4.5,
-        image: "https://placehold.co/300x300?text=Nerf+Pinpoint"
+        description: "Lanzador de precisión para puntería.",
+        image: "https://placehold.co/400x400/4682B4/FFFFFF?text=Nerf+Pinpoint"
     },
     {
-        id: 18,
+        id: 21,
         name: "Sonic 3 Set De Batalla Cangrejo Mecha",
         price: 650.00,
         oldPrice: null,
@@ -242,7 +280,8 @@ const products = [
         badgeClass: "info",
         icon: "fas fa-gamepad",
         rating: 4.8,
-        image: "https://placehold.co/300x300?text=Sonic+Battle+Set"
+        description: "Set de batalla con figura de Sonic y robot villano.",
+        image: "https://placehold.co/400x400/0000CD/FFFFFF?text=Sonic+Battle+Set"
     },
     {
         id: 22,
@@ -251,15 +290,31 @@ const products = [
         oldPrice: null,
         category: "6-9",
         badge: "Sorpresa",
-        badgeClass: "info",
-        icon: "fas fa-gift",
+        badgeClass: "",
+        icon: "fas fa-box-open",
         rating: 4.5,
-        image: "https://placehold.co/300x300?text=Adopt+Me+Peluche"
+        description: "Peluche sorpresa del popular juego de Roblox.",
+        image: "https://placehold.co/400x400/800080/FFFFFF?text=Adopt+Me+Peluche"
     },
 
-    // --- Categoría: Juegos de Mesa (Familia / +6 años) ---
+    // =========================================
+    // CATEGORÍA: JUEGOS DE MESA (FAMILIAR)
+    // =========================================
     {
         id: 23,
+        name: "Monopoly Knockout",
+        price: 420.00,
+        oldPrice: null,
+        category: "juegos",
+        badge: "Nuevo",
+        badgeClass: "highlight",
+        icon: "fas fa-money-bill-wave",
+        rating: 4.6,
+        description: "Versión rápida y activa del clásico Monopoly.",
+        image: "https://placehold.co/400x400/FFD700/333333?text=Monopoly+Knockout"
+    },
+    {
+        id: 24,
         name: "Juego De Mesa Atrapa Ratones Clásico",
         price: 510.00,
         oldPrice: null,
@@ -268,10 +323,11 @@ const products = [
         badgeClass: "",
         icon: "fas fa-mouse",
         rating: 4.6,
-        image: "https://placehold.co/300x300?text=Atrapa+Ratones"
+        description: "Juego de construcción de trampas y acción en cadena.",
+        image: "https://placehold.co/400x400/DC143C/FFFFFF?text=Atrapa+Ratones"
     },
     {
-        id: 24,
+        id: 25,
         name: "Hasbro Gaming Operando Clásico",
         price: 425.00,
         oldPrice: null,
@@ -280,19 +336,8 @@ const products = [
         badgeClass: "",
         icon: "fas fa-user-md",
         rating: 4.7,
-        image: "https://placehold.co/300x300?text=Operando"
-    },
-    {
-        id: 25,
-        name: "Hypershot Juego De Mesa 5 En 1 (Usado)",
-        price: 280.00,
-        oldPrice: null,
-        category: "juegos",
-        badge: "Usado",
-        badgeClass: "warning",
-        icon: "fas fa-dice",
-        rating: 4.0,
-        image: "https://placehold.co/300x300?text=Hypershot"
+        description: "Pon a prueba tu pulso y saca las piezas sin tocar los bordes.",
+        image: "https://placehold.co/400x400/FFFF00/333333?text=Operando"
     },
     {
         id: 26,
@@ -302,9 +347,10 @@ const products = [
         category: "juegos",
         badge: "Oferta",
         badgeClass: "success",
-        icon: "fas fa-plane",
+        icon: "fas fa-globe-americas",
         rating: 4.3,
-        image: "https://placehold.co/300x300?text=Turista+Mundial"
+        description: "El clásico juego de viajes edición Universal.",
+        image: "https://placehold.co/400x400/000080/FFFFFF?text=Turista+Mundial"
     },
     {
         id: 27,
@@ -316,22 +362,11 @@ const products = [
         badgeClass: "",
         icon: "fas fa-hourglass-half",
         rating: 4.5,
-        image: "https://placehold.co/300x300?text=Destreza"
+        description: "Coloca las piezas antes de que salten por el aire.",
+        image: "https://placehold.co/400x400/FFFF00/333333?text=Destreza"
     },
     {
         id: 28,
-        name: "Monopoly Knockout",
-        price: 420.00,
-        oldPrice: null,
-        category: "juegos",
-        badge: "Nuevo",
-        badgeClass: "highlight",
-        icon: "fas fa-money-bill-wave",
-        rating: 4.6,
-        image: "https://placehold.co/300x300?text=Monopoly+Knockout"
-    },
-    {
-        id: 29,
         name: "Jumanji: El Juego (Edición Clásica)",
         price: 280.00,
         oldPrice: null,
@@ -340,7 +375,21 @@ const products = [
         badgeClass: "",
         icon: "fas fa-drum",
         rating: 4.4,
-        image: "https://placehold.co/300x300?text=Jumanji"
+        description: "El juego que te persigue. Cuidado con la selva.",
+        image: "https://placehold.co/400x400/8B4513/FFFFFF?text=Jumanji"
+    },
+    {
+        id: 29,
+        name: "Hypershot Juego De Mesa 5 En 1",
+        price: 280.00,
+        oldPrice: null,
+        category: "juegos",
+        badge: "Usado/Outlet",
+        badgeClass: "warning",
+        icon: "fas fa-dice",
+        rating: 4.0,
+        description: "Consola de juegos electrónicos de mesa.",
+        image: "https://placehold.co/400x400/808080/FFFFFF?text=Hypershot"
     },
     {
         id: 30,
@@ -352,13 +401,42 @@ const products = [
         badgeClass: "",
         icon: "fas fa-piggy-bank",
         rating: 4.1,
-        image: "https://placehold.co/300x300?text=Puerquito+Enojon"
+        description: "Juego de acción y suerte para niños.",
+        image: "https://placehold.co/400x400/FFC0CB/333333?text=Puerquito+Enojon"
     },
 
-    // --- Categoría: Coleccionables / Avanzados (10-12+ años) ---
+    // =========================================
+    // CATEGORÍA: COLECCIONABLES (10+ AÑOS / ADULTOS)
+    // =========================================
     {
-        id: 3,
-        name: "4D Build Hulkbuster Marvel (348 Piezas, Luz LED)",
+        id: 31,
+        name: "Marvel Legends: Casco Duende Verde Premium",
+        price: 2800.00,
+        oldPrice: null,
+        category: "coleccionables",
+        badge: "Exclusivo",
+        badgeClass: "dark",
+        icon: "fas fa-mask",
+        rating: 5.0,
+        description: "Réplica 1:1 detallada del casco de Norman Osborn.",
+        image: "https://placehold.co/400x400/4B0082/FFFFFF?text=Casco+Duende+Verde"
+    },
+    {
+        id: 32,
+        name: "Marvel Legends: Máscara Spider-Man Homecoming",
+        price: 2600.00,
+        oldPrice: null,
+        category: "coleccionables",
+        badge: "Ed. Limitada",
+        badgeClass: "dark",
+        icon: "fas fa-spider",
+        rating: 5.0,
+        description: "Máscara electrónica con ojos expresivos ajustables.",
+        image: "https://placehold.co/400x400/DC143C/FFFFFF?text=Mascara+SpiderMan"
+    },
+    {
+        id: 33,
+        name: "4D Build Hulkbuster Marvel (348 Piezas)",
         price: 740.00,
         oldPrice: null,
         category: "coleccionables",
@@ -366,10 +444,11 @@ const products = [
         badgeClass: "dark",
         icon: "fas fa-robot",
         rating: 5.0,
-        image: "https://placehold.co/300x300?text=Hulkbuster+4D"
+        description: "Puzzle 3D detallado de la armadura Hulkbuster con soporte.",
+        image: "https://placehold.co/400x400/8B0000/FFFFFF?text=Hulkbuster+4D"
     },
     {
-        id: 4,
+        id: 34,
         name: "4D Build Escudo Capitán América",
         price: 610.00,
         oldPrice: null,
@@ -378,36 +457,28 @@ const products = [
         badgeClass: "",
         icon: "fas fa-shield-alt",
         rating: 4.9,
-        image: "https://placehold.co/300x300?text=Escudo+Capitan"
+        description: "Modelo para armar en 3D del escudo icónico.",
+        image: "https://placehold.co/400x400/0000CD/FFFFFF?text=Escudo+Capitan"
     },
     {
-        id: 13,
-        name: "Marvel Legends: Máscara Spider-Man Homecoming",
-        price: 2600.00,
+        id: 35,
+        name: "King Homer - Los Simpsons (Jakks Pacific)",
+        price: 850.00,
         oldPrice: null,
         category: "coleccionables",
-        badge: "Ed. Limitada",
-        badgeClass: "dark",
-        icon: "fas fa-mask",
-        rating: 5.0,
-        image: "https://placehold.co/300x300?text=Spiderman+Mask"
-    },
-    {
-        id: 21,
-        name: "Marvel Legends: Casco Duende Verde Premium",
-        price: 2800.00,
-        oldPrice: null,
-        category: "coleccionables",
-        badge: "Exclusivo",
-        badgeClass: "dark",
-        icon: "fas fa-user-secret",
-        rating: 5.0,
-        image: "https://placehold.co/300x300?text=Duende+Verde+Helm"
+        badge: "Colección",
+        badgeClass: "",
+        icon: "fas fa-tv",
+        rating: 4.8,
+        description: "Figura de colección de Homero King Kong.",
+        image: "https://placehold.co/400x400/FFFF00/333333?text=King+Homer"
     },
 
-    // --- Categoría: Varios / General ---
+    // =========================================
+    // CATEGORÍA: VARIOS / EDUCACIÓN
+    // =========================================
     {
-        id: 33,
+        id: 36,
         name: "Set De Masas Play Doh Microscopio Luminoso",
         price: 280.00,
         oldPrice: null,
@@ -416,22 +487,11 @@ const products = [
         badgeClass: "info",
         icon: "fas fa-microscope",
         rating: 4.3,
-        image: "https://placehold.co/300x300?text=Microscopio+PlayDoh"
+        description: "Juguete STEAM para explorar texturas como un científico.",
+        image: "https://placehold.co/400x400/00FFFF/333333?text=Microscopio+PlayDoh"
     },
     {
-        id: 35,
-        name: "King Homer - Los Simpsons (Jakks Pacific)",
-        price: 850.00,
-        oldPrice: null,
-        category: "varios",
-        badge: "Colección",
-        badgeClass: "",
-        icon: "fas fa-tv",
-        rating: 4.7,
-        image: "https://placehold.co/300x300?text=King+Homer"
-    },
-    {
-        id: 36,
+        id: 37,
         name: "El Perro Slinky (Toy Story)",
         price: 940.00,
         oldPrice: null,
@@ -440,18 +500,7 @@ const products = [
         badgeClass: "",
         icon: "fas fa-dog",
         rating: 4.8,
-        image: "https://placehold.co/300x300?text=Slinky+Dog"
-    },
-    {
-        id: 37,
-        name: "The Ugglys Pug Electronic Pet",
-        price: 550.00,
-        oldPrice: null,
-        category: "varios",
-        badge: "Divertido",
-        badgeClass: "warning",
-        icon: "fas fa-grin-tongue",
-        rating: 4.2,
-        image: "https://placehold.co/300x300?text=Ugglys+Pug"
+        description: "El clásico perro de resorte de las películas de Pixar.",
+        image: "https://placehold.co/400x400/A52A2A/FFFFFF?text=Slinky+Dog"
     }
 ];

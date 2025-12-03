@@ -59,6 +59,7 @@ function renderProducts() {
                 <div class="product-rating">
                     ${getStars(product.rating)} <span>(${Math.floor(Math.random() * 200) + 50})</span>
                 </div>
+                <p class="product-description">${product.description || ''}</p>
                 <div class="product-price">
                     <span class="current-price">$${product.price.toFixed(2)}</span>
                     ${product.oldPrice ? `<span class="old-price">$${product.oldPrice.toFixed(2)}</span>` : ''}
@@ -236,6 +237,7 @@ function performSearch() {
                     <div class="rating">
                         ${getStars(product.rating)}
                     </div>
+                    <p class="product-description">${product.description || ''}</p>
                     <p class="price">$${product.price}</p>
                     <button class="btn-add" onclick="addToCart(${product.id})">
                         Agregar al carrito
