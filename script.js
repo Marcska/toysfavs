@@ -315,4 +315,4 @@ if (viewCatalogBtn) {
         }
     });
 }
-```
+
