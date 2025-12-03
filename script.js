@@ -49,12 +49,12 @@ function createProductCardHTML(product) {
     return `
         <div class="product-card">
             <div class="product-icon-top"><i class="${iconClass}"></i></div>
-            <div class="product-image">
+            <div class="product-image" onclick="openProductModal(${product.id})" style="cursor: pointer;">
                 <img src="${product.image}" alt="${product.name}">
             </div>
             <div class="product-info">
                 <span class="product-category">${product.badge || 'OFERTA'}</span>
-                <h3>${product.name}</h3>
+                <h3 onclick="openProductModal(${product.id})" style="cursor: pointer;">${product.name}</h3>
                 <div class="product-rating">
                     ${getStars(product.rating)} <span>(${Math.floor(Math.random() * 200) + 50})</span>
                 </div>
