@@ -266,7 +266,5 @@ if (searchInput) {
     });
 }
 
-});
-
 
 
