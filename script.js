@@ -26,29 +26,28 @@ const checkoutBtn = document.getElementById('checkout-btn');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    renderProducts();
+    renderProducts(products); // Render all products initially
     updateCartUI();
+    setupCategoryFilters();
 });
 
-// Render Products
-function renderProducts() {
-    if (!productsContainer) return;
+// Helper: Create Product Card HTML
+function createProductCardHTML(product) {
+    // Determine icon based on category or random
+    let iconClass = 'fas fa-gift';
+    if (product.category === 'bebes' || product.category === 'Bebés') iconClass = 'fas fa-baby';
+    if (product.category === '3-5' || product.category === '3-5 años') iconClass = 'fas fa-child';
+    if (product.category === '6-9' || product.category === '6-9 años') iconClass = 'fas fa-gamepad';
+    if (product.category === '10-12' || product.category === '10-12 años') iconClass = 'fas fa-headset';
+    if (product.category === 'coleccionables') iconClass = 'fas fa-trophy';
+    if (product.category === 'juegos') iconClass = 'fas fa-dice';
+    if (product.category === 'educativos') iconClass = 'fas fa-book';
 
-    productsContainer.innerHTML = ''; // Clear existing products
-    products.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card');
+    if (product.badge === 'Más vendido') iconClass = 'fas fa-fire';
+    if (product.badge === 'Nuevo') iconClass = 'fas fa-star';
 
-        // Determine icon based on category or random
-        let iconClass = 'fas fa-gift';
-        if (product.category === 'Bebés') iconClass = 'fas fa-baby';
-        if (product.category === '3-5 años') iconClass = 'fas fa-child';
-        if (product.category === '6-9 años') iconClass = 'fas fa-gamepad';
-        if (product.category === '10-12 años') iconClass = 'fas fa-headset';
-        if (product.badge === 'Más vendido') iconClass = 'fas fa-fire';
-        if (product.badge === 'Nuevo') iconClass = 'fas fa-star';
-
-        productCard.innerHTML = `
+    return `
+        <div class="product-card">
             <div class="product-icon-top"><i class="${iconClass}"></i></div>
             <div class="product-image">
                 <img src="${product.image}" alt="${product.name}">
@@ -68,8 +67,23 @@ function renderProducts() {
                     Agregar al carrito
                 </button>
             </div>
-        `;
-        productsContainer.appendChild(productCard);
+        </div>
+    `;
+}
+
+// Render Products
+function renderProducts(productsToRender) {
+    if (!productsContainer) return;
+
+    productsContainer.innerHTML = ''; // Clear existing products
+
+    if (productsToRender.length === 0) {
+        productsContainer.innerHTML = '<p style="text-align: center; width: 100%; grid-column: 1/-1; padding: 40px;">No se encontraron productos.</p>';
+        return;
+    }
+
+    productsToRender.forEach(product => {
+        productsContainer.innerHTML += createProductCardHTML(product);
     });
 }
 
@@ -82,21 +96,6 @@ function getStars(rating) {
             stars += '<i class="fas fa-star-half-alt"></i>';
         } else {
             stars += '<i class="far fa-star"></i>';
-        }
-    }
-    return stars;
-}
-
-// Helper: Generate Star Rating HTML
-function getStarRating(rating) {
-    let stars = '';
-    for (let i = 1; i <= 5; i++) {
-        if (i <= rating) {
-            stars += '<i class="fas fa-star"></i>';
-        } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
-            stars += '<i class="fas fa-star-half-alt"></i>';
-        } else {
-            stars += '<i class="far fa-star"></i>'; // Empty star if needed, or just omit
         }
     }
     return stars;
@@ -224,35 +223,12 @@ function performSearch() {
         product.category.toLowerCase().includes(query)
     );
 
-    const productsGrid = document.querySelector('.products-grid');
-    if (filteredProducts.length > 0) {
-        productsGrid.innerHTML = filteredProducts.map(product => `
-            <div class="product-card">
-                <div class="product-image">
-                    <span class="badge">Nuevo</span>
-                    <img src="${product.image}" alt="${product.name}">
-                </div>
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                    <div class="rating">
-                        ${getStars(product.rating)}
-                    </div>
-                    <p class="product-description">${product.description || ''}</p>
-                    <p class="price">$${product.price}</p>
-                    <button class="btn-add" onclick="addToCart(${product.id})">
-                        Agregar al carrito
-                    </button>
-                </div>
-            </div>
-        `).join('');
-    } else {
-        productsGrid.innerHTML = '<p style="text-align: center; width: 100%; grid-column: 1/-1;">No se encontraron productos.</p>';
-    }
+    renderProducts(filteredProducts);
 
     // Scroll to products
-    const productsSection = document.getElementById('productos');
+    const productsSection = document.getElementById('products-container');
     if (productsSection) {
-        productsSection.scrollIntoView({ behavior: 'smooth' });
+        productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -265,6 +241,57 @@ if (searchInput) {
         if (e.key === 'Enter') {
             performSearch();
         }
+    });
+}
+
+// Category Filtering
+function setupCategoryFilters() {
+    const navLinks = document.querySelectorAll('.secondary-nav a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Remove active class from all
+            navLinks.forEach(l => l.classList.remove('nav-highlight'));
+            // Add to current
+            link.classList.add('nav-highlight');
+
+            const href = link.getAttribute('href');
+            let category = href.replace('#', '');
+
+            // Map href to product category values
+            // hrefs: bebes, 3-5, 6-9, 10-12, juegos, educativos, ofertas
+            // product categories: bebes, 3-5, 6-9, coleccionables, juegos, educativos, varios
+
+            let filteredProducts = products;
+
+            if (category === 'ofertas') {
+                // Show all or specific logic for offers? Let's show all for now or filter by badge
+                // filteredProducts = products.filter(p => p.badge === 'Oferta' || p.badge === 'Más vendido');
+                // User probably expects to see everything or specific offers. Let's show all for "Ofertas navideñas" as a "Home" equivalent
+                filteredProducts = products;
+            } else {
+                filteredProducts = products.filter(product => {
+                    // Normalize for comparison
+                    const pCat = product.category.toLowerCase();
+
+                    if (category === '3-5') return pCat === '3-5' || pCat === '3-5 años';
+                    if (category === '6-9') return pCat === '6-9' || pCat === '6-9 años';
+                    if (category === '10-12') return pCat === '10-12' || pCat === '10-12 años' || pCat === 'coleccionables';
+
+                    return pCat === category;
+                });
+            }
+
+            renderProducts(filteredProducts);
+
+            // Scroll to products
+            const productsSection = document.getElementById('products-container');
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
     });
 }
 
