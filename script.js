@@ -316,3 +316,66 @@ if (viewCatalogBtn) {
     });
 }
 
+
+// Product Detail Modal Logic
+const productModal = document.getElementById('product-modal');
+const closeProductModalBtn = document.getElementById('close-product-modal');
+const modalImage = document.getElementById('modal-product-image');
+const modalBadge = document.getElementById('modal-product-badge');
+const modalName = document.getElementById('modal-product-name');
+const modalRating = document.getElementById('modal-product-rating');
+const modalDescription = document.getElementById('modal-product-description');
+const modalPrice = document.getElementById('modal-product-price');
+const modalOldPrice = document.getElementById('modal-product-old-price');
+const modalAddToCartBtn = document.getElementById('modal-add-to-cart');
+
+window.openProductModal = function(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+
+    // Populate Modal Data
+    modalImage.src = product.image;
+    modalImage.alt = product.name;
+    
+    modalBadge.innerText = product.badge || 'OFERTA';
+    modalBadge.className = 'badge ' + (product.badgeClass || '');
+    if (!product.badge) modalBadge.style.display = 'none';
+    else modalBadge.style.display = 'inline-block';
+
+    modalName.innerText = product.name;
+    modalRating.innerHTML = `${getStars(product.rating)} <span>(${Math.floor(Math.random() * 200) + 50} opiniones)</span>`;
+    modalDescription.innerText = product.description || 'Sin descripción disponible.';
+    
+    modalPrice.innerText = `$${product.price.toFixed(2)}`;
+    if (product.oldPrice) {
+        modalOldPrice.innerText = `$${product.oldPrice.toFixed(2)}`;
+        modalOldPrice.style.display = 'inline';
+    } else {
+        modalOldPrice.style.display = 'none';
+    }
+
+    // Setup Add to Cart Button
+    modalAddToCartBtn.onclick = function() {
+        addToCart(product.id);
+        productModal.classList.remove('active');
+    };
+
+    // Show Modal
+    productModal.classList.add('active');
+};
+
+if (closeProductModalBtn) {
+    closeProductModalBtn.addEventListener('click', () => {
+        productModal.classList.remove('active');
+    });
+}
+
+// Close Modal on Outside Click (merged with cart modal logic)
+window.onclick = function (event) {
+    if (event.target == cartModal) {
+        cartModal.classList.remove('active');
+    }
+    if (event.target == productModal) {
+        productModal.classList.remove('active');
+    }
+};
