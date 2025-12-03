@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La mejor tienda de juguetes para Navidad. Encuentra regalos para bebés, niños y niñas. Envíos rápidos y seguros.">
+    <title>JuguetesNavidad - El Regalo Perfecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">Juguetes<span class="highlight">Navidad</span></a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar el regalo perfecto...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#bebes">Bebés</a></li>
+                    <li><a href="#3-5">3 a 5 años</a></li>
+                    <li><a href="#6-9">6 a 9 años</a></li>
+                    <li><a href="#10-12">10 a 12 años</a></li>
+                    <li><a href="#juegos">Juegos de mesa</a></li>
+                    <li><a href="#educativos">Educativos</a></li>
+                    <li><a href="#ofertas" class="nav-highlight">Ofertas</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <a href="#" class="icon-btn"><i class="far fa-user"></i></a>
+                <a href="#" class="icon-btn cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge">0</span>
+                </a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="mobile-nav">
+            <div class="mobile-search">
+                <input type="text" placeholder="Buscar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+             <ul>
+                <li><a href="#bebes">Bebés</a></li>
+                <li><a href="#3-5">3 a 5 años</a></li>
+                <li><a href="#6-9">6 a 9 años</a></li>
+                <li><a href="#10-12">10 a 12 años</a></li>
+                <li><a href="#juegos">Juegos de mesa</a></li>
+                <li><a href="#educativos">Educativos</a></li>
+                <li><a href="#ofertas">Ofertas navideñas</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 2. Hero Principal -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>La magia de la Navidad comienza con el regalo perfecto</h1>
+                <p>Encuentra ese juguete especial que iluminará su sonrisa. Una selección pensada por padres, para padres.</p>
+                <a href="#recomendados" class="btn btn-primary">Explorar regalos</a>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder for Hero Image. Para usar tu propia imagen, reemplaza este div con: <img src="tu-imagen.jpg" alt="Imagen Principal"> -->
+                <div class="img-placeholder" data-label="Imagen Principal (Hero)">
+                    <i class="fas fa-gift"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Sección de Recomendados -->
+    <section id="recomendados" class="section recommended">
+        <div class="container">
+            <h2 class="section-title">Recomendados de Navidad</h2>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <article class="product-card">
+                    <div class="product-badge">Más vendido</div>
+                    <div class="product-img-placeholder" data-label="Foto Juguete 1"></div>
+                    <div class="product-info">
+                        <h3>Castillo Mágico de Ensueño</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="price">$49.99</p>
+                        <button class="btn btn-secondary">Agregar al carrito</button>
+                    </div>
+                </article>
+                <!-- Product Card 2 -->
+                <article class="product-card">
+                    <div class="product-badge highlight">Ideal para regalo</div>
+                    <div class="product-img-placeholder" data-label="Foto Juguete 2"></div>
+                    <div class="product-info">
+                        <h3>Set de Construcción Espacial</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="price">$35.50</p>
+                        <button class="btn btn-secondary">Agregar al carrito</button>
+                    </div>
+                </article>
+                <!-- Product Card 3 -->
+                <article class="product-card">
+                    <div class="product-badge">Oferta</div>
+                    <div class="product-img-placeholder" data-label="Foto Juguete 3"></div>
+                    <div class="product-info">
+                        <h3>Oso de Peluche Gigante</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <p class="price">$29.99 <span class="old-price">$39.99</span></p>
+                        <button class="btn btn-secondary">Agregar al carrito</button>
+                    </div>
+                </article>
+                <!-- Product Card 4 -->
+                <article class="product-card">
+                    <div class="product-img-placeholder" data-label="Foto Juguete 4"></div>
+                    <div class="product-info">
+                        <h3>Juego de Mesa Familiar</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="price">$24.99</p>
+                        <button class="btn btn-secondary">Agregar al carrito</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Sección por Edades -->
+    <section class="section ages">
+        <div class="container">
+            <h2 class="section-title">Busca por Edad</h2>
+            <div class="ages-grid">
+                <a href="#bebes" class="age-card">
+                    <div class="age-img-placeholder" data-label="Bebés"></div>
+                    <h3>Bebés</h3>
+                </a>
+                <a href="#3-5" class="age-card">
+                    <div class="age-img-placeholder" data-label="3 a 5 años"></div>
+                    <h3>3 a 5 años</h3>
+                </a>
+                <a href="#6-9" class="age-card">
+                    <div class="age-img-placeholder" data-label="6 a 9 años"></div>
+                    <h3>6 a 9 años</h3>
+                </a>
+                <a href="#10-12" class="age-card">
+                    <div class="age-img-placeholder" data-label="10 a 12 años"></div>
+                    <h3>10 a 12 años</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Beneficios -->
+    <section class="section benefits">
+        <div class="container benefits-grid">
+            <div class="benefit-item">
+                <i class="fas fa-truck-fast"></i>
+                <h3>Envíos Rápidos</h3>
+                <p>Llega a tiempo para Navidad</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Pagos Seguros</h3>
+                <p>Tu tranquilidad es primero</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-undo"></i>
+                <h3>Devoluciones Fáciles</h3>
+                <p>Sin preguntas complicadas</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-gift"></i>
+                <h3>Listo para Regalar</h3>
+                <p>Opciones de envoltura disponibles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Ofertas y Cuenta Regresiva -->
+    <section id="ofertas" class="section offers">
+        <div class="container offers-content">
+            <div class="offers-text">
+                <h2>Ofertas Navideñas</h2>
+                <p>¡No dejes pasar los descuentos exclusivos antes de que llegue Santa!</p>
+                <div id="countdown" class="countdown">
+                    <div class="time-box"><span id="days">00</span>Días</div>
+                    <div class="time-box"><span id="hours">00</span>Hrs</div>
+                    <div class="time-box"><span id="minutes">00</span>Min</div>
+                    <div class="time-box"><span id="seconds">00</span>Seg</div>
+                </div>
+                <a href="#" class="btn btn-light">Ver todas las ofertas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Testimonios -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen otros padres</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Me encantó la selección de juguetes. Encontré justo lo que mi hijo quería y llegó súper rápido."</p>
+                    <div class="author">- María G.</div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"La envoltura de regalo es preciosa. Me ahorró mucho tiempo. ¡Totalmente recomendado!"</p>
+                    <div class="author">- Carlos R.</div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Excelente atención al cliente. Tuve una duda con un juego de mesa y me ayudaron al instante."</p>
+                    <div class="author">- Sofía L.</div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Atención al Cliente</h3>
+                <ul>
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Rastrear Pedido</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Políticas</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 JuguetesNavidad. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
