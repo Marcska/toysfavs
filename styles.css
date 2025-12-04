@@ -998,10 +998,18 @@ ul {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    /* Wider first column */
-    gap: 40px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 100px;
+    /* Increased separation */
     margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
 }
 
 .footer-logo {
@@ -1275,6 +1283,7 @@ ul {
     margin-top: 50px;
     font-style: italic;
 }
+
 /* Product Detail Modal */
 .product-modal {
     position: fixed;
@@ -1392,5 +1401,5 @@ ul {
 
 #close-product-modal:hover {
     background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
