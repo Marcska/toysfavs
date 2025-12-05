@@ -11,15 +11,41 @@ const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ
 let products = [];
 
 async function fetchProducts() {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         if (!GOOGLE_SHEET_CSV_URL || GOOGLE_SHEET_CSV_URL === "YOUR_CSV_URL_HERE") {
             console.warn("No Google Sheet URL provided. Using fallback empty products.");
             resolve([]);
             return;
         }
 
-        Papa.parse(GOOGLE_SHEET_CSV_URL, {
-            download: true,
+        let csvData = null;
+
+        try {
+            // Try 1: Direct Fetch
+            console.log("Attempting direct fetch...");
+            const response = await fetch(GOOGLE_SHEET_CSV_URL);
+            if (!response.ok) throw new Error(`Direct fetch failed: ${response.status}`);
+            csvData = await response.text();
+            console.log("Direct fetch successful!");
+        } catch (directError) {
+            console.warn("Direct fetch failed, trying CORS proxy...", directError);
+
+            try {
+                // Try 2: CORS Proxy (allorigins.win)
+                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(GOOGLE_SHEET_CSV_URL)}`;
+                const response = await fetch(proxyUrl);
+                if (!response.ok) throw new Error(`Proxy fetch failed: ${response.status}`);
+                csvData = await response.text();
+                console.log("Proxy fetch successful!");
+            } catch (proxyError) {
+                console.error("All fetch attempts failed.");
+                reject(proxyError);
+                return;
+            }
+        }
+
+        // Parse the CSV data
+        Papa.parse(csvData, {
             header: true,
             skipEmptyLines: true,
             complete: function (results) {
@@ -38,7 +64,7 @@ async function fetchProducts() {
                         description: item.description,
                         image: item.image
                     }));
-                    console.log("Products loaded:", products);
+                    console.log("Products parsed:", products);
                     resolve(products);
                 } catch (error) {
                     console.error("Error processing products:", error);
@@ -46,7 +72,7 @@ async function fetchProducts() {
                 }
             },
             error: function (error) {
-                console.error("Error loading CSV:", error);
+                console.error("Error parsing CSV:", error);
                 reject(error);
             }
         });
