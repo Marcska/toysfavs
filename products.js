@@ -23,7 +23,9 @@ async function fetchProducts() {
         try {
             // Try 1: Direct Fetch
             console.log("Attempting direct fetch...");
-            const response = await fetch(GOOGLE_SHEET_CSV_URL);
+            // Add cache buster to avoid stale data
+            const cacheBuster = `&t=${Date.now()}`;
+            const response = await fetch(GOOGLE_SHEET_CSV_URL + cacheBuster);
             if (!response.ok) throw new Error(`Direct fetch failed: ${response.status}`);
             csvData = await response.text();
             console.log("Direct fetch successful!");
@@ -32,7 +34,9 @@ async function fetchProducts() {
 
             try {
                 // Try 2: CORS Proxy (allorigins.win)
-                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(GOOGLE_SHEET_CSV_URL)}`;
+                // Add cache buster here too
+                const cacheBuster = `&t=${Date.now()}`;
+                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(GOOGLE_SHEET_CSV_URL + cacheBuster)}`;
                 const response = await fetch(proxyUrl);
                 if (!response.ok) throw new Error(`Proxy fetch failed: ${response.status}`);
                 csvData = await response.text();
@@ -51,19 +55,28 @@ async function fetchProducts() {
             complete: function (results) {
                 try {
                     // Transform CSV data to match our product structure/types
-                    products = results.data.map(item => ({
-                        id: parseInt(item.id) || Date.now(),
-                        name: item.name,
-                        price: parseFloat(item.price) || 0,
-                        oldPrice: item.oldPrice ? parseFloat(item.oldPrice) : null,
-                        category: item.category,
-                        badge: item.badge === "null" || item.badge === "" ? null : item.badge,
-                        badgeClass: item.badgeClass,
-                        icon: item.icon,
-                        rating: parseFloat(item.rating) || 5.0,
-                        description: item.description,
-                        image: item.image
-                    }));
+                    products = results.data.map(item => {
+                        // Handle "null" string explicitly for oldPrice
+                        let parsedOldPrice = null;
+                        if (item.oldPrice && item.oldPrice.toLowerCase() !== 'null' && item.oldPrice.trim() !== '') {
+                            const parsed = parseFloat(item.oldPrice);
+                            if (!isNaN(parsed)) parsedOldPrice = parsed;
+                        }
+
+                        return {
+                            id: parseInt(item.id) || Date.now(),
+                            name: item.name,
+                            price: parseFloat(item.price) || 0,
+                            oldPrice: parsedOldPrice,
+                            category: item.category,
+                            badge: item.badge === "null" || item.badge === "" ? null : item.badge,
+                            badgeClass: item.badgeClass,
+                            icon: item.icon,
+                            rating: parseFloat(item.rating) || 5.0,
+                            description: item.description,
+                            image: item.image
+                        };
+                    });
                     console.log("Products parsed:", products);
                     resolve(products);
                 } catch (error) {
