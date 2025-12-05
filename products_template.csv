@@ -1,0 +1,38 @@
+id,name,price,oldPrice,category,badge,badgeClass,icon,rating,description,image
+1,Baby Alive Muñeca Grows Up Lala GooGoo,710,null,bebes,Interactivo,highlight,fas fa-baby,4.8,Crece de recién nacida a niña. Incluye accesorios interactivos.,assets/images/1.jpg
+2,Dear Mia Little Liz | Cubo de Actividades Montessori,350,null,bebes,Educativo,success,fas fa-shapes,4.6,Cubo didáctico para motricidad fina y estimulación temprana.,assets/images/2.jpg
+3,Muñeca Bebe Nenuco, Adivina Lo Que Veo,610,null,bebes,null,,fas fa-baby-carriage,4.3,Muñeca clásica interactiva para cuidados básicos.,assets/images/3.jpg
+4,Bus Escolar Cocomelon 2 En 1,750,null,bebes,Musical,info,fas fa-bus,4.7,Autobús musical con luces y sonidos de la serie.,assets/images/4.jpg
+5,FurReal Walkalots Grandes Paseos - Mascota Interactiva,655,null,3-5,Más Vendido,highlight,fas fa-dog,4.8,Mascota electrónica que camina y hace sonidos reales.,assets/images/5.jpg
+6,Paw Patrol: Chase Guardián Peluche Interactivo,955,null,3-5,Luz y Sonido,highlight,fas fa-shield-alt,4.9,Peluche con linterna y frases de la patrulla canina.,assets/images/6.jpg
+7,Paw Patrol Camión de Bomberos Marshall,1350,null,3-5,null,,fas fa-truck-monster,4.9,Camión de rescate transformable con figura de Marshall.,assets/images/7.jpg
+8,Play-Doh Set Moto Repartidora de Pizzas,1000,null,3-5,Creativo,success,fas fa-motorcycle,4.5,Set de modelado para crear y entregar pizzas de juguete.,assets/images/8.jpg
+9,Alberca Infantil Inflable Bluey,530,null,3-5,Verano,info,fas fa-water,4.7,Alberca resistente con diseño de Bluey y Bingo.,assets/images/9.jpg
+10,Play-Doh Iron Man Armor Maker Lab,360,null,3-5,null,,fas fa-robot,4.5,Laboratorio para crear armaduras de Iron Man con masa.,assets/images/10.jpg
+11,Play-Doh Marvel Spider-Man Lanza y Atrapa,360,null,3-5,null,,fas fa-spider,4.4,Figura de Spider-Man con acción de telaraña Play-Doh.,assets/images/11.jpg
+12,Play-Doh Kitchen Creations Pasteles Divertidos,240,null,3-5,Oferta,warning,fas fa-birthday-cake,4.6,Set básico de repostería creativa.,assets/images/12.jpg
+13,PIN Y PON Pinypon,710,null,3-5,null,,fas fa-users,4.4,Set de figuras intercambiables Pinypon.,assets/images/13.jpg
+14,Plastilina Play-Doh 2 piezas,50,null,3-5,Básico,,fas fa-palette,4.0,Botes de repuesto de masa Play-Doh.,assets/images/14.jpg
+15,The Ugglys Pug Electronic Pet,550,null,3-5,Divertido,,fas fa-dog,4.2,Mascota electrónica interactiva con sonidos graciosos.,assets/images/15.jpg
+16,Nerf N Series Lanzador Infinite (80 Dardos),610,null,6-9,Novedad,highlight,fas fa-crosshairs,4.7,Lanzador de alta capacidad con sistema de recarga fácil.,assets/images/16.jpg
+17,Nerf Dino Squad,210,null,6-9,null,,fas fa-dragon,4.5,Lanzador con diseño de dinosaurio T-Rex.,assets/images/17.jpg
+18,NERF Lanzador Elite Jr Flyer,155,null,6-9,Económico,success,fas fa-bullseye,4.5,Diseñado para manos pequeñas, fácil de cargar.,assets/images/18.jpg
+19,Nerf Junior Wild Lionfury,205,null,6-9,null,,fas fa-paw,4.4,Lanzador con diseño de león.,assets/images/19.jpg
+20,NERF N Series Pinpoint (18 Dardos),290,null,6-9,null,,fas fa-crosshairs,4.5,Lanzador de precisión para puntería.,assets/images/20.jpg
+21,Sonic 3 Set De Batalla Cangrejo Mecha,650,null,6-9,Gamer,info,fas fa-gamepad,4.8,Set de batalla con figura de Sonic y robot villano.,assets/images/21.jpg
+22,Peluche Adopt Me! Sorpresa,220,null,6-9,Sorpresa,,fas fa-box-open,4.5,Peluche sorpresa del popular juego de Roblox.,assets/images/22.jpg
+23,Monopoly Knockout,420,null,juegos,Nuevo,highlight,fas fa-money-bill-wave,4.6,Versión rápida y activa del clásico Monopoly.,assets/images/23.jpg
+24,Juego De Mesa Atrapa Ratones Clásico,510,null,juegos,Clásico,,fas fa-mouse,4.6,Juego de construcción de trampas y acción en cadena.,assets/images/24.jpg
+25,Hasbro Gaming Operando Clásico,425,null,juegos,null,,fas fa-user-md,4.7,Pon a prueba tu pulso y saca las piezas sin tocar los bordes.,assets/images/25.jpg
+26,Turista Mundial Universal Studios,160,null,juegos,Oferta,success,fas fa-globe-americas,4.3,El clásico juego de viajes edición Universal.,assets/images/26.jpg
+27,Juego De Mesa Destreza,345,null,juegos,Agilidad,,fas fa-hourglass-half,4.5,Coloca las piezas antes de que salten por el aire.,assets/images/27.jpg
+28,Jumanji: El Juego (Edición Clásica),280,null,juegos,Aventura,,fas fa-drum,4.4,El juego que te persigue. Cuidado con la selva.,assets/images/28.jpg
+29,Hypershot Juego De Mesa 5 En 1,280,null,juegos,Usado/Outlet,warning,fas fa-dice,4.0,Consola de juegos electrónicos de mesa.,assets/images/29.jpg
+30,Puerquito Enojon Juego Electronico,360,null,juegos,null,,fas fa-piggy-bank,4.1,Juego de acción y suerte para niños.,assets/images/30.jpg
+31,Marvel Legends: Casco Duende Verde Premium,2800,null,coleccionables,Exclusivo,dark,fas fa-mask,5.0,Réplica 1:1 detallada del casco de Norman Osborn.,assets/images/31.jpg
+32,Marvel Legends: Máscara Spider-Man Homecoming,2600,null,coleccionables,Ed. Limitada,dark,fas fa-spider,5.0,Máscara electrónica con ojos expresivos ajustables.,assets/images/32.jpg
+33,4D Build Hulkbuster Marvel (348 Piezas),740,null,coleccionables,Premium,dark,fas fa-robot,5.0,Puzzle 3D detallado de la armadura Hulkbuster con soporte.,assets/images/33.jpg
+34,4D Build Escudo Capitán América,610,null,coleccionables,null,,fas fa-shield-alt,4.9,Modelo para armar en 3D del escudo icónico.,assets/images/34.jpg
+35,King Homer - Los Simpsons (Jakks Pacific),850,null,coleccionables,Colección,,fas fa-tv,4.8,Figura de colección de Homero King Kong.,assets/images/35.jpg
+36,Set De Masas Play Doh Microscopio Luminoso,280,null,educativos,Ciencia,info,fas fa-microscope,4.3,Juguete STEAM para explorar texturas como un científico.,assets/images/36.jpg
+37,El Perro Slinky (Toy Story),940,null,varios,Retro,,fas fa-dog,4.8,El clásico perro de resorte de las películas de Pixar.,assets/images/37.jpg

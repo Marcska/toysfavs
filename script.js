@@ -25,7 +25,14 @@ const closeCartBtn = document.getElementById('close-cart');
 const checkoutBtn = document.getElementById('checkout-btn');
 
 // Initialize
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        await fetchProducts();
+    } catch (e) {
+        console.error("Failed to load products", e);
+        // Optional: Show error to user
+    }
+
     renderProducts(products); // Render all products initially
     updateCartUI();
     setupCategoryFilters();
