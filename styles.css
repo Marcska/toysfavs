@@ -679,15 +679,16 @@ ul {
 
 .current-price {
     font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    /* Dark price */
+    font-weight: 700;
+    color: #D32F2F;
+    /* Red for current price */
 }
 
 .old-price {
     text-decoration: line-through;
     color: #999;
     font-size: 0.9rem;
+    margin-left: 5px;
 }
 
 .add-to-cart-btn {
