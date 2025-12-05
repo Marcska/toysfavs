@@ -4,7 +4,7 @@
 // 2. File > Share > Publish to web
 // 3. Select 'Entire Document' and 'Comma-separated values (.csv)'
 // 4. Click Publish and copy the link below
-const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQEHbccxMsJgEzCGaazwf--YSAnM3jQgHBGBS3ojpIkkICH6ffP88CPjkZW7GZxbpbeFABSoqcWdUHx/pub?gid=355954433&single=true&output=csv";
+const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQEHbccxMsJgEzCGaazwf--YSAnM3jQgHBGBS3ojpIkkICH6ffP88CPjkZW7GZxbpbeFABSoqcWdUHx/pub?gid=693746861&single=true&output=csv";
 // Note: using a placeholder or demo URL until user provides one. 
 // I will start with an empty array or a fallback to ensure the site loads if URL is invalid.
 
